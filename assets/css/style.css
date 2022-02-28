@@ -1158,10 +1158,10 @@ section {
   font-weight: 600;
   color: rgb(255, 0, 0);
   position: relative;
-  padding-bottom: 12px;
+  /* padding-bottom: 12px; */
 }
 #footer .footer-top .footer-links {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 #footer .footer-top .footer-links ul {
   list-style: none;
@@ -1169,13 +1169,13 @@ section {
   margin: 0;
 }
 #footer .footer-top .footer-links ul i {
-  padding-right: 2px;
+  /* padding-right: 2px; */
   color: #ed5b5b;
   font-size: 18px;
   line-height: 1;
 }
 #footer .footer-top .footer-links ul li {
-  padding: 10px 0;
+  /* padding: 10px 0; */
   display: flex;
   align-items: center;
 }
@@ -1194,13 +1194,13 @@ section {
 #footer .footer-top .footer-newsletter form {
   margin-top: 30px;
   background: #fff;
-  padding: 6px 10px;
+  /* padding: 6px 10px; */
   position: relative;
   border-radius: 4;
 }
 #footer .footer-top .footer-newsletter form input[type=email] {
   border: 0;
-  padding: 4px;
+  /* padding: 4px; */
   width: calc(100% - 110px);
 }
 #footer .footer-top .footer-newsletter form input[type=submit] {
@@ -1211,7 +1211,7 @@ section {
   border: 0;
   background: none;
   font-size: 16px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   background: #cc1616;
   color: #fff;
   transition: 0.3s;
@@ -1236,6 +1236,6 @@ section {
 }
 @media (max-width: 575px) {
   #footer .footer-top .footer-info {
-    margin: -20px 0 30px 0;
+    /* margin: -20px 0 30px 0; */
   }
 }
