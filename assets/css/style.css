@@ -14,12 +14,20 @@ body {
 }
 
 a {
-  color: #cc1616;
+  color: #41006d;
   text-decoration: none;
 }
 
+.nobglinks{
+color: #000;
+}
+
+.nobglinks:hover{
+color: #cc1616;
+}
+
 a:hover {
-  color: #e82d2d;
+  color: #eeea00;
   text-decoration: none;
 }
 
@@ -48,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #e72323;
+  background: #cc1616;
   color: #fff;
 }
 .back-to-top.active {
@@ -536,7 +544,7 @@ section {
   padding: 0;
 }
 .why-us .box:hover {
-  background: #cc1616;
+  background: #f74c4c;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
@@ -770,6 +778,12 @@ section {
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
+.chhotiimg{
+  width: 20px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
