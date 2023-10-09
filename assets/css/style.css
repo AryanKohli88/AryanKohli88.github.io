@@ -374,10 +374,11 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: calc(100vh - 110px);
-  background: url("../img/hero-bg.png") top center;
-  background-size: cover;
-  position: relative;
+  height: calc(100vh - 60px);
+  background-color: black;
+  /* background: url("../img/hero-bg.png") top center; */
+  /* background-size: cover; */
+  /* position: relative; */
 }
 #hero:before {
   content: "";
@@ -651,6 +652,7 @@ section {
   background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.png") fixed center;
   background-size: cover;
   padding: 120px 0;
+  z-index: 2;
 }
 .cta h3 {
   color: #fff;

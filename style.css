@@ -1,0 +1,36 @@
+/* Styles apart from BOOTSRAP templates (custom) */
+
+
+.hidden {
+    opacity: 0;
+    filter: blrr(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blrr(0);
+    transform: translateX(0);
+}
+
+.vhidden {
+    opacity: 0;
+    filter: blrr(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.vshow {
+    opacity: 1;
+    filter: blrr(0);
+    transform: translateX(0);
+}
+
+#canvas {
+	position: absolute;
+	left: 0;
+	top: 5%;
+	width: 100%;
+	height: 100%;
+}
