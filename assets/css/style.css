@@ -494,6 +494,16 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+/* some texture wala bg daalde */
+/* .about{
+  background-color: #000;
+}
+.why-us{
+  background-color: #000;
+}
+.Tools{
+  background-color: #000;
+} */
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
