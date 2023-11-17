@@ -40,6 +40,20 @@
 
 <body>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js">
+  </script>
+  <script>
+var animation;        
+animation = bodymovin.loadAnimation({
+    container: document.getElementById("M1"),
+    path: 'animation/motion.json',
+    render: 'svg',
+    loop: false,
+    autoplay: true,
+    name: "trans"           
+});
+</script>
+
   <canvas id="canvas" ></canvas>
   <script src="canvas.js"></script>
 
@@ -91,7 +105,7 @@
             <h3>Student at BITS Pilani, Goa Campus</h3>
             <br><br><br>
             <p class="fst-italic">
-              Hey! I am Aryan Kohli, a student the Goa campus of BITS Pilani.<br> Take a look at my website.
+              Hey! I am Aryan Kohli, a student at BITS Goa.<br> Have a look at my website.
             </p>
 
           </div>
@@ -151,13 +165,13 @@
 
     <!-- ======= Tools Section ======= -->
     <section id="portfolio" class="Tools">
+      <div class="section-title">
+        <span>Technical Skills</span>
+        <h2>Technical Skills</h2>
+      </div>
+      
       <div class="container">
-        <div class="section-title">
-          <span>Technical Skills</span>
-          <h2>Technical Skills</h2>
-        </div>
-
-        <div> <b>
+        <div class="half"> <b>
 
           <section class="hidden">
           <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450"> -->
@@ -223,6 +237,10 @@
           <!-- </div> -->
             </section>
         </b>
+        </div>
+        <div class="half">
+          <div id="M1" class="hidden">casas</div>
+
         </div>
 
       </div>

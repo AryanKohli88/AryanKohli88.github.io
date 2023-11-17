@@ -35,6 +35,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+
+
+.container {
+  width: 100%;
+  overflow: hidden; /* Clearfix to contain floated inner divs */
+}
+
+.half {
+  width: 50%;
+  float: left; /* Float left to position divs side by side */
+  box-sizing: border-box; /* Include padding and border in the width */
+  /* border: 1px solid #000; Optional: border for visibility */
+  /* height: 100px; Optional: set a height for the inner divs */
+}
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
