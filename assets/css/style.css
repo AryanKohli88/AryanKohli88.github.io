@@ -1,16 +1,11 @@
-/**
-* Template Name: Day - v4.7.0
-* Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+}
+
+.animation{
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -35,7 +30,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.card {
+  transition: transform 0.3s;
+}
 
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.btn-primary {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+  color: #fff;
+}
 
 .container {
   width: 100%;
@@ -44,10 +54,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .half {
   width: 50%;
-  float: left; /* Float left to position divs side by side */
-  box-sizing: border-box; /* Include padding and border in the width */
-  /* border: 1px solid #000; Optional: border for visibility */
-  /* height: 100px; Optional: set a height for the inner divs */
+  float: left; 
+  box-sizing: border-box; 
 }
 
 

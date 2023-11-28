@@ -1,6 +1,3 @@
-/* Styles apart from BOOTSRAP templates (custom) */
-
-
 .hidden {
     opacity: 0;
     filter: blrr(5px);
@@ -34,3 +31,5 @@
 	width: 100%;
 	height: 100%;
 }
+
+
