@@ -1,0 +1,2 @@
+import{_ as e,h as s,s as t,x as r}from"./icon-29bbe755.js";import{l as o,k as n}from"./shell-38e4146f.js";let a=class extends t{constructor(){super(...arguments),this.pubsub=new o(this)}connectedCallback(){super.connectedCallback(),this.pubsub.publish(n.CommentTreeAdsLoaded,{hi:"hi"})}createRenderRoot(){return this}render(){return r` <slot></slot> `}};a=e([s("shreddit-comment-tree-ads")],a);
+//# sourceMappingURL=comment-tree-ads-client-js-54dda5eb.js.map
