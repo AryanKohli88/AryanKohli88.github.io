@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ARYAN KOHLI</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .video-row {
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .video-row:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transform: scale(1.01);
+      background-color: #f9f9f9;
+    }
+
+    .iframe-wrapper iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 8px;
+    }
+
+    .arrow {
+      font-size: 2rem;
+      text-align: center;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .arrow {
+        transform: rotate(90deg);
+        margin: 15px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Sample Dubs</h1>
+
+    <!-- Row 1 -->
+    <div class="row align-items-center video-row">
+      <div class="col-md-5 iframe-wrapper">
+        <iframe src="https://youtube.com/embed/AEsZcDyE8bg"
+          title="Dub Sample 1 - Original" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+      <div class="col-md-2 arrow">
+        <i class="bi bi-arrow-right-circle-fill"></i>
+      </div>
+      <div class="col-md-5 iframe-wrapper">
+        <iframe src="https://youtube.com/embed/JINymET2t5c"
+          title="Dub Sample 1 - Dubbed" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row align-items-center video-row">
+      <div class="col-md-5 iframe-wrapper">
+        <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_3"
+          title="Dub Sample 2 - Original" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+      <div class="col-md-2 arrow">
+        <i class="bi bi-arrow-right-circle-fill"></i>
+      </div>
+      <div class="col-md-5 iframe-wrapper">
+        <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_4"
+          title="Dub Sample 2 - Dubbed" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
