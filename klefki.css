@@ -1,0 +1,174 @@
+:root{
+  --bg-0: #f4f7fb;
+  --bg-1: #e9eef6;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --text: #0e2433;
+  --accent: #1578d2;
+  --accent-2: #0b63a8;
+  --border: #dde6ef;
+  --shadow: 0 10px 30px rgba(8,30,54,0.06);
+  --radius: 12px;
+  --mono: "Fira Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  --glass: rgba(255,255,255,0.7);
+}
+
+/* Base page background and typography (does not target header specifics) */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", "Open Sans", Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, var(--bg-0), var(--bg-1));
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.65;
+  padding: 28px 24px;
+}
+
+article {
+  max-width: 980px;
+  margin: 30px auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+  border-radius: calc(var(--radius) - 2px);
+  padding: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Headings (exclude header logo) */
+h1, h2, h3 {
+  color: #072033;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.35rem; margin-top: 18px; }
+h3 { font-size: 1.05rem; }
+
+/* If your top-level H1 is the page title and has class 'logo' we won't override it.
+   For other h1 elements, ensure they are visually prominent: */
+h1:not(.logo) { color: #052538; }
+
+/* Paragraphs, lists */
+p { margin: 0 0 14px 0; color: var(--text); font-size: 1rem; }
+ul, ol { margin: 8px 0 18px 24px; color: var(--muted); }
+li { margin: 6px 0; }
+
+/* Horizontal rule */
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 22px 0;
+}
+
+/* Cards / sections */
+section, .card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: calc(var(--radius) - 4px);
+  box-shadow: 0 6px 18px rgba(9,35,60,0.04);
+  margin-bottom: 16px;
+}
+
+/* Code blocks and inline code */
+pre {
+  background: linear-gradient(180deg,#f7fbff,#f2f8ff);
+  border: 1px solid rgba(21,120,210,0.06);
+  color: #063248;
+  padding: 14px;
+  border-radius: 10px;
+  overflow: auto;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 12px 0;
+  white-space: pre-wrap;
+}
+code {
+  background: rgba(8,34,60,0.04);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+}
+
+/* Links and buttons (do not override nav links) */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(21,120,210,0.15);
+}
+a:hover {
+  color: var(--accent-2);
+  border-bottom-style: solid;
+}
+
+/* Action button */
+.button, .btn {
+  display: inline-block;
+  background: linear-gradient(180deg,var(--accent),var(--accent-2));
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 8px 24px rgba(21,120,210,0.12);
+}
+
+/* Ghost button */
+.button.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+
+/* Badges / small highlights */
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(21,120,210,0.08);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.82rem;
+  border: 1px solid rgba(21,120,210,0.06);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  background: transparent;
+}
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+th {
+  background: linear-gradient(90deg, rgba(21,120,210,0.04), transparent);
+  font-weight: 700;
+}
+
+/* Small utility classes */
+.kv { display:flex; gap:8px; align-items:center; }
+.muted { color: var(--muted); }
+
+/* Accessibility focus */
+:focus { outline: 3px solid rgba(21,120,210,0.14); outline-offset: 2px; border-radius: 6px; }
+
+/* Responsive tweaks */
+@media (max-width: 880px) {
+  body { padding: 18px 12px; }
+  h1 { font-size: 1.6rem; }
+  pre { font-size: 0.92rem; padding: 12px; }
+  body > .doc-wrap, body > .doc-container, .container { padding: 18px; margin: 18px auto; }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Klefki Keys Platform Documentation</title>
+      <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script defer src="script.js"></script>
+
+  <link rel="stylesheet" href="klefki.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            font-family: monospace;
+        }
+        ul {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Klefki Keys – Documentation</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html" target="_blank">Meet the creator of KlefkiKeys</a></li>
+          </ul>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+<!-- <h1>Klefki Keys Platform – Documentation</h1> -->
+<hr />
+
+<h2>Overview</h2>
+<p>
+    Klefki Keys is a platform that allows <strong>developers</strong> to monetize their applications on a pay-per-use model, 
+    while enabling <strong>users</strong> to easily discover, onboard, and pay for tools using secure, unique klefki keys.
+</p>
+<p>This documentation contains two sections:</p>
+<ul>
+    <li><strong>Developer Documentation</strong> – For integrating your app with Klefki.</li>
+    <li><strong>User Documentation</strong> – For using apps found on the Klefki platform.</li>
+</ul>
+<hr />
+<h2>Common notes for all users/developers</h2>
+<ol>
+    <li>1 Klefki Credit = 1 INR</li>
+    <li>Klefki Keys is currently in <strong>Beta Stage</strong>. We are continuously working to improve the platform and add new features.</li>
+    <li>While using the Kleki Keys Platform, if you encounter any unexpected behaviou try to logout -> re-login and try again. Feel free to write us at tfypfilms@gmail.com about any inconvenience! We would love to hear you 🤗</li>
+    <li>Anyone's Klefki Keys are highly confidential and must not be shared with anyone.</li>
+    <li>For any issues, contact the Klefki team at<strong> tfypfilms@gmail.com </strong>
+</ol>
+<h1>Developer Documentation</h1>
+
+<h2>1. Introduction</h2>
+<p>
+    As a developer, you can monetize your application or service on a usage basis. Klefki handles user credits, payments, logs, and monthly payouts.
+</p>
+<hr />
+
+<h2>2. Getting Started</h2>
+
+<h3>Step 1: Login</h3>
+<p>
+    Visit <strong><a href="https://klefkikeys.netlify.app/" target="_blank" >https://klefkikeys.netlify.app/</a></strong> and log in using your Google account.
+</p>
+
+<h3>Step 2: Create Your App</h3>
+<p>Navigate to <strong>Owned Apps → Create an App</strong> and fill the following:</p>
+<ol>
+    <li><strong>Name of the App</strong> – users will see this publicly.</li>
+    <li><strong>Status</strong> – choose whether the app is <em>Launched</em> or <em>Under Development</em>.</li>
+    <li><strong>Description</strong> – add details about your app. <em>It is recommended to include a link to your service/app.</em></li>
+    <li><strong>Payment Mode</strong> – choose how you'd like to receive monthly payouts.</li>
+</ol>
+<p>
+    Once you submit the form, the Klefki team will verify your app and respond within <strong>24 hours</strong>. Verification includes checking if you have received a sample payment to the payment details your have shared while creating the App on Kleki.
+</p>
+<hr />
+
+<h2>3. Using the Klefki API</h2>
+<p>After approval, integrate Klefki into your application using two APIs:</p>
+<ul>
+    <li><strong>Make Expense API</strong> (mandatory)</li>
+    <li><strong>Validate Key API</strong> (optional but recommended)</li>
+</ul>
+<hr />
+
+<h2>3.1 Make Expense API</h2>
+<p>Should get triggered when a user uses your tool.</p>
+
+<h3>Endpoint</h3>
+<pre><code>POST https://klefki-backend-fra.onrender.com/klefki-api</code></pre>
+
+<h3>Payload</h3>
+<pre><code>{
+  "expense_UKK": "&lt;user's klefki key&gt; (to be added by user)",
+  "expense_value": &lt;credits deducted per usage&gt;,
+  "tool_ID_byDev": "&lt;your tool ID&gt;"
+}
+</code></pre>
+
+<h3>How to find your Tool ID?</h3>
+<p>Go to:<br />
+<strong>Owned Apps → Click your app → Download Expenses</strong> (against any user)<br />
+A PDF will open showing logs and the <strong>Tool ID</strong> at the top.</p>
+<hr />
+
+<h2>3.2 Validate Key API (Optional but Recommended)</h2>
+<p>Before performing an operation, user can check if a their Klefki Key is valid. This also prepares Klefki backend for the upcoming transaction. A response with status code 200 means that the klefki key user has shared is valid.</p>
+
+<h3>Endpoint</h3>
+<pre><code>GET https://klefki-backend-fra.onrender.com/api/validate/ukk</code></pre>
+
+<h3>Payload</h3>
+<pre><code>{
+  "key": "&lt;user's klefki key&gt;"
+}
+</code></pre>
+<hr />
+
+<h2>4. (Sample) Python Implementation</h2>
+
+<h3>Validate Klefki Key</h3>
+<pre><code>import requests
+
+def validate_klefki_key(klefki_key):
+    try:
+        response = requests.get(
+            "https://klefki-backend-fra.onrender.com/api/validate/ukk",
+            json={"key": klefki_key},
+            timeout=10
+        )
+        return response.json()
+    except Exception as e:
+        return {"error": str(e)}
+</code></pre>
+
+<h3>Send Usage Event (Make Expense)</h3>
+<pre><code>import requests
+
+def send_usage_event(user_ukk, credits, tool_id):
+    payload = {
+        "expense_UKK": user_ukk,
+        "expense_value": credits,
+        "tool_ID_byDev": tool_id,
+    }
+
+    try:
+        response = requests.post(
+            "https://klefki-backend-fra.onrender.com/klefki-api",
+            json=payload,
+            timeout=10
+        )
+        return response.json()
+    except Exception as e:
+        return {"error": str(e)}
+</code></pre>
+<hr />
+
+<h2>5. Terms & Conditions for Developers</h2>
+<ul>
+    <li><strong>Strictly prohibited:</strong> storing, logging, or misusing any user's Klefki Key (UKK).</li>
+    <li>Any developer found doing so will be <strong>banned</strong> from the Klefki Keys platform.</li>
+    <li>Usage-based charges must reflect actual use.</li>
+    <li>Developers must ensure secure API communication.</li>
+</ul>
+<hr />
+
+<h1>User Documentation</h1>
+
+<h2>1. Getting Started</h2>
+<p>
+    Visit <strong><a href="https://klefkikeys.netlify.app/">https://klefkikeys.netlify.app/</a></strong> and login using Google.<br />
+    All users get <strong>10 credits by default</strong>.<br />
+    <strong>1 credit = 1 INR.</strong>
+</p>
+<hr />
+
+<h2>2. Exploring Tools</h2>
+<p>
+    Go to the <strong>Explore</strong> section to browse apps created by developers.<br />
+    Click <strong>Onboard</strong> to start using any tool.
+</p>
+<hr />
+
+<h2>3. Getting Your Unique UKK (User Klefki Key)</h2>
+<p>Once you onboard a tool:</p>
+<ul>
+    <li>Click the tool from your dashboard.</li>
+    <li>You will see your unique<strong> User Klefki Key (UKK)</strong>.</li>
+    <li>Click "OK" to copy it to your clipboard.</li>
+</ul>
+
+<h3>Important Notes</h3>
+<ul>
+    <li>Your UKK is <strong>confidential</strong>.</li>
+    <li>Never share it with anyone.</li>
+    <li>Only use it inside the app/tool you onboarded.</li>
+</ul>
+<hr />
+
+<h2>4. Tracking Your Expenses</h2>
+<p>Go to <strong>Balance History</strong> to track:</p>
+<ul>
+    <li>How many credits you spent</li>
+    <li>On which tools</li>
+    <li>Expense logs per usage</li>
+</ul>
+<hr />
+
+<h2>End of Documentation</h2>
+
+</body>
+</body>
+
+</html>
